@@ -8,4 +8,4 @@ RUN npm install -g nodemon
 COPY ./ ./
 
 
-ENTRYPOINT [ "nodemon", "index.js" ]
+ENTRYPOINT [ "nodemon", "./src/server.js" ]
