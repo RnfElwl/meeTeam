@@ -1,0 +1,17 @@
+{
+  "name": "meeteam",
+  "version": "1.0.0",
+  "description": "게임도중 자신이 어떤 팀원을 만났는지 카운팅해주고 그 팀원이 어땠는지 평가해주는 웹사이트를 만들예정",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
