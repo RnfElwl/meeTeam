@@ -1,2 +1,11 @@
 @import "./reset.css";
 @import "./components/header.css";
+
+main {
+  height: 90vh;
+}
+
+footer {
+  background-color: rgb(54, 124, 230);
+  height: 10vh;
+}
