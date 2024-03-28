@@ -1,3 +1,2 @@
-header {
-  background-color: tomato;
-}
+@import "./reset.css";
+@import "./components/header.css";
