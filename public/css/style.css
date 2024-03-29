@@ -4,6 +4,13 @@
 main {
   height: 90vh;
 }
+.main__list {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
 
 footer {
   background-color: rgb(54, 124, 230);

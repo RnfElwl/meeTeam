@@ -1,4 +1,8 @@
 extends ../base
 
 block content 
-    contnet 메인 홈
+    contnet 
+        section.main__list
+            form.search_box(action="" method="get")
+                input.search(type="text" placeholder="닉네임을 입력해주세요")
+                i.fas.fa-search
