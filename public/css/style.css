@@ -1,5 +1,12 @@
 @import "./reset.css";
+/* components */
 @import "./components/header.css";
+/* screens */
+@import "./screens/login.css";
+
+body {
+  margin: 0px;
+}
 
 main {
   height: 90vh;
