@@ -1,0 +1,9 @@
+extends ../base
+
+
+block content 
+            form.login__form(action="post") 
+                div.login__inputs
+                    input.login__input(type="text" name="id" placeholder="id" required)
+                    input.login__input(type="password" name="password" placeholder="password" required)
+                button.login__submit(type="submit") 로그인 
