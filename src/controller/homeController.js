@@ -1,5 +1,5 @@
 const home = (req, res) => {
-  return res.render("content/home.pug");
+  return res.render("home.pug");
 };
 
 export { home };

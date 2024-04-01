@@ -5,7 +5,7 @@ const app = express();
 const port = 3000;
 
 app.set("view engine", "pug");
-app.set("views", process.cwd() + "/src/views");
+app.set("views", process.cwd() + "/src/views/content");
 app.use("/public", express.static("public"));
 
 app.use("/", homeRouter);
