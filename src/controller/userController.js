@@ -11,7 +11,7 @@ const getJoin = (req, res) => {
 };
 
 const postJoin = (req, res) => {
-  // return res.render("/");
+  const { name, email, id, password, password_check } = req.body;
 };
 
 export { getLogin, postLogin, getJoin, postJoin };
