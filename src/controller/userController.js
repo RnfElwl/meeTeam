@@ -1,17 +1,26 @@
-const getLogin = (req, res) => {
-  return res.render("login");
-};
-const postLogin = (req, res) => {
-  console.log(req.body);
-  return res.render("/");
-};
+import User from "../model/userModel.js";
 
-const getJoin = (req, res) => {
-  return res.render("join");
-};
+class UserController {
+  getLogin(req, res) {
+    return res.render("login");
+  }
+  postLogin(req, res) {
+    return res.render("/");
+  }
+  getJoin(req, res) {
+    return res.render("join");
+  }
+  postJoin(req, res) {
+    const userData = req.body;
 
-const postJoin = (req, res) => {
-  const { name, email, id, password, password_check } = req.body;
-};
+    const user = new User();
+    user.create(userData, (err, userId) => {
+      if (err) {
+        return res.status(500).json({ error: "Failed to create user." });
+      }
+      return res.redirect("/");
+    });
+  }
+}
 
-export { getLogin, postLogin, getJoin, postJoin };
+export default UserController;

@@ -1,5 +1,5 @@
 import express from "express";
-import { homeRouter } from "./router/homeRouter.js";
+import homeRouter from "./router/homeRouter.js";
 // import "./db.js";
 import bodyParser from "body-parser";
 
