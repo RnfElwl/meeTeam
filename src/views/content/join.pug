@@ -1,6 +1,8 @@
 extends ../base
 
 block content 
+    if errorMessage
+        span=errorMessage
     div.login__form
         form(method="POST") 
             input.login__input(type="text" name="name" placeholder="name" required)

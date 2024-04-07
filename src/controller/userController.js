@@ -16,7 +16,8 @@ class UserController {
     const user = new User();
     user.create(userData, (err, userId) => {
       if (err) {
-        return res.status(500).json({ error: "Failed to create user." });
+        const errorMessage = err.errorMessage;
+        return res.status(500).render("join", { errorMessage });
       }
       return res.redirect("/");
     });
