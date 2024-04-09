@@ -2,12 +2,13 @@ extends ../base
 
 block content 
     if errorMessage
-        span=errorMessage
-    div.login__form
-        form(method="POST") 
-            input.login__input(type="text" name="name" placeholder="name" required)
-            input.login__input(type="text" name="email" placeholder="email" required)
-            input.login__input(type="text" name="id" placeholder="id" required)
-            input.login__input(type="password" name="password" placeholder="password" required)
-            input.login__input(type="password" name="password_check" placeholder="password check" required)
-            input.login__submit(type="submit" value="회원가입")
+        span.error_message=errorMessage
+    div.join__form
+        form(method="POST")
+            input.join__input(type="text" name="name" placeholder="name" required)
+            input.join__input(type="text" name="email" placeholder="email" required)
+            input.join__input(type="text" name="id" placeholder="id" required)
+            input.join__input(type="password" name="password" placeholder="password" required)
+            input.join__input(type="password" name="password_check" placeholder="password check" required)
+            div
+                input.join__submit(type="submit" value="회원가입")

@@ -1,0 +1,21 @@
+.error_message {
+  position: absolute;
+  top: 10%;
+  background-color: tomato;
+  color: aliceblue;
+  padding: 10px 15px;
+  border-radius: 30px;
+  animation: errorShow 5s forwards;
+}
+
+@-webkit-keyframes errorShow {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

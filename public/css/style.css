@@ -1,9 +1,10 @@
 @import "./reset.css";
 /* components */
 @import "./components/header.css";
+@import "./components/error.css";
 /* screens */
 @import "./screens/login.css";
-
+@import "./screens/join.css";
 body {
   background-color: rgb(23, 25, 27);
   margin: 0px;
