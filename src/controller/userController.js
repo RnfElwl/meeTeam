@@ -1,20 +1,29 @@
 import User from "../model/userModel.js";
 
 class UserController {
+  constructor() {
+    this.user = new User();
+  }
   getLogin(req, res) {
     return res.render("login");
   }
   postLogin(req, res) {
-    return res.render("/");
+    const user = new User();
+    user.login(req, (err) => {
+      if (err) {
+        const errorMessage = err.errorMessage;
+        return res.status(500).render("login", { errorMessage });
+      }
+      return res.redirect("/");
+    });
   }
   getJoin(req, res) {
     return res.render("join");
   }
   postJoin(req, res) {
-    const userData = req.body;
-
     const user = new User();
-    user.create(userData, (err, userId) => {
+    const userData = req.body;
+    user.createUser(userData, (err) => {
       if (err) {
         const errorMessage = err.errorMessage;
         return res.status(500).render("join", { errorMessage });

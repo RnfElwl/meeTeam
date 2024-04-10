@@ -3,6 +3,8 @@ header.header
         ul.header__list
             li 
                 a(href="/") 홈
-           
-            li.login 
-                a(href="/login") 로그인
+            if loggedIn
+                li 프로필
+            else 
+                li.login 
+                    a(href="/login") 로그인
