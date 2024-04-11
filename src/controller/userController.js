@@ -9,7 +9,8 @@ class UserController {
   }
   postLogin(req, res) {
     const user = new User();
-    user.login(req, (err) => {
+    const data = req.body;
+    user.login(data, req.session, (err) => {
       if (err) {
         const errorMessage = err.errorMessage;
         return res.status(500).render("login", { errorMessage });

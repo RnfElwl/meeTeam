@@ -10,8 +10,8 @@ class User {
       database: "test",
     });
   }
-  login(req, callback) {
-    const { id, password } = req.body;
+  login(data, session, callback) {
+    const { id, password } = data;
     const sql = `select * from meet_team_users where m_id=${id} and m_password=${password}`;
     this.connection.query(sql, (err, result) => {
       if (!result) {
@@ -22,9 +22,8 @@ class User {
         callback(errorMessage);
         return;
       }
-      console.log(result);
-      req.session.loggedIn = true;
-      req.session.user = result;
+      session.loggedIn = true;
+      session.user = result;
       this.connection.end();
       return callback(null);
     });
