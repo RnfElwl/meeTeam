@@ -1,5 +1,6 @@
 import mysql from "mysql2";
 import dotenv from "dotenv";
+import bcrypt from "bcrypt";
 class User {
   constructor() {
     dotenv.config();
@@ -28,9 +29,10 @@ class User {
       return callback(null);
     });
   }
-  createUser(userData, callback) {
+  async createUser(userData, callback) {
     const { name, email, id, password, password_check } = userData;
     if (password != password_check) return 0;
+    password = await bcrypt.hash(password, 6);
     const existSql = `select m_id, email from meet_team_users where m_id=${id} and email=${email}`;
     this.connection.query(existSql, (err, result) => {
       if (result) {
