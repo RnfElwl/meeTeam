@@ -16,6 +16,9 @@ homeRouter
   .route("/join")
   .get(userController.getJoin)
   .post(userController.postJoin);
-homeRouter.route("/teamSearch").get(searchController.getSearchTeam);
+homeRouter
+  .route("/teamSearch")
+  .get(searchController.getSearchRecod)
+  .post(searchController.postSearchRecod);
 
 export default homeRouter;
