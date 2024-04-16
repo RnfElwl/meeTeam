@@ -4,7 +4,10 @@ header.header
             li 
                 a(href="/") 홈
             if loggedIn
-                li 프로필
+                li.profile
+                    div 프로필
+                    div.logout 로그아웃
+                    script(src="public/js/logout.js") 
             else 
                 li.login 
                     a(href="/login") 로그인

@@ -4,6 +4,7 @@ import session from "express-session";
 import mysql from "mysql2";
 import MySQLStoreCreator from "express-mysql-session";
 import homeRouter from "./router/homeRouter.js";
+import userRouter from "./router/userRouter.js";
 import { localsMiddleware } from "./middleware.js";
 // import "./db.js";
 dotevn.config();
@@ -40,8 +41,8 @@ app.use(localsMiddleware);
 app.set("view engine", "pug");
 app.set("views", process.cwd() + "/src/views/content");
 app.use("/public", express.static("public"));
-
 app.use("/", homeRouter);
+app.use("/user", userRouter);
 
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)

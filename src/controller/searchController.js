@@ -5,7 +5,12 @@ class SearchController {
   }
   getSearchRecod(req, res) {
     const search = new Search(req.query.name);
-    search.myRecod();
+    search.myRecod((err) => {
+      if (err) {
+        const errorMessage = err.errorMessage;
+        return res.render("teamSearch", { errorMessage });
+      }
+    });
     return res.render("teamSearch.pug");
   }
   postSearchRecod(req, res) {

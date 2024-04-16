@@ -2,8 +2,6 @@ extends ../base
 
 
 block content 
-    if errorMessage
-        span.error_message=errorMessage
     form.login__form(method="post") 
         div.login__inputs
             input.login__input(type="text" name="id" placeholder="id" required)
