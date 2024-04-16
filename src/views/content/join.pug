@@ -1,8 +1,7 @@
 extends ../base
 
 block content 
-    if errorMessage
-        span.error_message=errorMessage
+    include partials/error
     div.join__form
         form(method="POST")
             input.join__input(type="text" name="name" placeholder="name" required)
