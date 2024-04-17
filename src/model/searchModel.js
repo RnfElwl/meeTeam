@@ -29,8 +29,11 @@ class Search {
           "라이엇 api 키가 유효하지 않습니다 api키를 갱신해주세요";
         callback(errorMessage);
         return;
-      } else if (err.response.status == 400) {
+      } else if (err.response.status == 404) {
         const errorMessage = "전적을 찾을 수 없습니다";
+        callback(errorMessage);
+      } else {
+        const errorMessage = err.response.status + "오류가 발생했습니다";
         callback(errorMessage);
       }
     }

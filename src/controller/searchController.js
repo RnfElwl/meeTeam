@@ -9,10 +9,10 @@ class SearchController {
     search.myRecod(nickName, (err) => {
       if (err) {
         const errorMessage = err;
-        return res.render("teamSearch", { errorMessage });
+        return res.status(400).render("teamSearch", { errorMessage });
       }
+      return res.render("teamSearch");
     });
-    return res.render("teamSearch.pug");
   }
   postSearchRecod(req, res) {
     return;
