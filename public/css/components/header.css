@@ -23,6 +23,10 @@
   font-size: 15px;
   color: aliceblue;
 }
+.header__list a {
+  color: aliceblue;
+  text-decoration-line: none;
+}
 .search_box {
   display: flex;
   justify-content: space-between;
