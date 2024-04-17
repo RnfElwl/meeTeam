@@ -1,11 +1,13 @@
 .error_message {
-  position: absolute;
+  position: fixed;
   top: 10%;
   background-color: tomato;
   color: aliceblue;
   padding: 10px 15px;
   border-radius: 30px;
   animation: errorShow 5s forwards;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @-webkit-keyframes errorShow {

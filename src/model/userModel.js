@@ -15,7 +15,7 @@ class User {
     const { id, password } = data;
     const sql = `select * from meet_team_users where m_id=${id} and m_password=${password}`;
     this.connection.query(sql, (err, result) => {
-      if (!result) {
+      if (!result || result.length == 0) {
         const errorMessage = {
           errorMessage: "아이디 비밃번호를 확인해 주세요.",
         };

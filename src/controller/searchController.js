@@ -4,10 +4,11 @@ class SearchController {
     this.Search = new Search();
   }
   getSearchRecod(req, res) {
-    const search = new Search(req.query.name);
-    search.myRecod((err) => {
+    const search = new Search();
+    const nickName = req.query.name;
+    search.myRecod(nickName, (err) => {
       if (err) {
-        const errorMessage = err.errorMessage;
+        const errorMessage = err;
         return res.render("teamSearch", { errorMessage });
       }
     });
