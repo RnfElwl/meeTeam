@@ -1,0 +1,26 @@
+.userInfo {
+  display: flex;
+  height: 100px;
+}
+.userInfo__icon {
+  position: relative;
+}
+.userInfo__icon > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+}
+.userInfo__icon > span {
+  border-radius: 10px;
+  padding: 3px 5px;
+  background-color: rgb(1, 5, 20);
+  color: aliceblue;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.userInfo__nickName {
+  color: aliceblue;
+}

@@ -5,6 +5,7 @@
 /* screens */
 @import "./screens/login.css";
 @import "./screens/join.css";
+@import "./screens/search.css";
 body {
   position: relative;
   background-color: rgb(23, 25, 27);

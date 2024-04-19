@@ -1,7 +1,8 @@
 extends ../base
 
 block content 
-    contents 
-        action 
-            div 대충 전적나옴
-            span sdfsf
+    div.userInfo 
+        div.userInfo__icon
+            img(src="https://ddragon.leagueoflegends.com/cdn/14.8.1/img/profileicon/"+profileData.profileIconId+".png", alt="")
+            span=profileData.summonerLevel
+        span.userInfo__nickName=nickName
