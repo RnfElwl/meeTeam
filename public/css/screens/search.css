@@ -1,9 +1,11 @@
 .userInfo {
   display: flex;
+  width: 60%;
   height: 100px;
 }
 .userInfo__icon {
   position: relative;
+  margin-right: 20px;
 }
 .userInfo__icon > img {
   width: 100px;
@@ -22,5 +24,66 @@
 }
 
 .userInfo__nickName {
+  font-size: 25px;
+  font-weight: 900;
   color: aliceblue;
+}
+.matchBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}
+.matchBox__myResult {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  background-color: bisque;
+  padding: 10px 20px;
+  border-radius: 10px 10px 0 0;
+}
+.matchBox__myResult > img {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+.searchList {
+  background-color: darkgray;
+  display: none;
+  width: 60%;
+  padding: 10px 20px;
+  height: 150px;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: column;
+}
+
+.searchList__box {
+  display: flex;
+  align-items: center;
+  margin: 1px;
+}
+.searchList__box-champ {
+  width: 30px;
+  height: 30px;
+}
+.searchList__box-text {
+  display: flex;
+  flex-direction: column;
+  color: rgb(1, 5, 20);
+  font-size: 12px;
+  white-space: nowrap;
+}
+.searchList__box-kda {
+}
+.matchBox__toggle {
+  display: flex;
+  background-color: beige;
+  padding: 10px 20px;
+  border-radius: 0 0 10px 10px;
+  width: 60%;
+  justify-content: center;
+  cursor: pointer;
 }

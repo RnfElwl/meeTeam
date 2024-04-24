@@ -1,8 +1,29 @@
 extends ../base
 
 block content 
+    
+    form.search_box(action="/meeting", method="get")
+        input.search(type="text" name="user1" value="" placeholder="닉네임을 입력해주세요")
+        input.search(type="text" name="user2" placeholder="닉네임을 입력해주세요")
+        i.fas.fa-search
     div.userInfo 
         div.userInfo__icon
             img(src="https://ddragon.leagueoflegends.com/cdn/14.8.1/img/profileicon/"+profileData.profileIconId+".png", alt="")
             span=profileData.summonerLevel
         span.userInfo__nickName=nickName
+    div.matchBox
+        div.matchBox__myResult
+            each i in searchData
+                if i.puuid==profileData.puuid
+                    img(src="https://ddragon.leagueoflegends.com/cdn/14.8.1/img/champion/"+i.championName+".png", alt="")
+                    div.searchList__box-kda #{i.kills}/#{i.deaths}/#{i.assists}
+        ul.searchList 
+            each i in searchData
+                li.searchList__box 
+                    img.searchList__box-champ(src="https://ddragon.leagueoflegends.com/cdn/14.8.1/img/champion/"+i.championName+".png", alt="")
+                    div.searchList__box-text
+                        div #{i.riotIdGameName} ##{i.riotIdTagline}
+                        div.searchList__box-kda #{i.kills}/#{i.deaths}/#{i.assists}
+        div.matchBox__toggle
+            i.fas.fa-chevron-down
+    script(src="public/js/match.js") 

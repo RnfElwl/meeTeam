@@ -21,7 +21,9 @@ class SearchController {
       }
     });
     const profileData = await userProfile;
-    return res.render("teamSearch", { nickName, profileData, recod });
+    const searchData = recod.data.info.participants;
+    console.log(profileData);
+    return res.render("teamSearch", { nickName, profileData, searchData });
   }
   postSearchRecod(req, res) {
     return;
