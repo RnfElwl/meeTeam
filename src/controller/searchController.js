@@ -13,17 +13,15 @@ class SearchController {
         return res.status(400).render("teamSearch", { errorMessage });
       }
     });
-
-    const recod = await search.myRecod(userProfile, (err) => {
+    const profileData = await userProfile;
+    const recod = await search.myRecod(profileData, (err) => {
       if (err) {
         const errorMessage = err;
         return res.status(400).render("teamSearch", { errorMessage });
       }
     });
-    const profileData = await userProfile;
-    const searchData = recod.data.info.participants;
-    console.log(profileData);
-    return res.render("teamSearch", { nickName, profileData, searchData });
+    const matchList = await recod;
+    return res.render("teamSearch", { nickName, profileData, matchList });
   }
   postSearchRecod(req, res) {
     return;
