@@ -1,7 +1,8 @@
 form.search_form(action="/" method="get")
-    input.search_box(type="text" name="name1" placeholder="닉네임을 입력해주세요")
-    i.fas.fa-search
-    input.search_box(type="text" name="name2" placeholder="닉네임을 입력해주세요")
-    i.fas.fa-search
-    button(type="submit") fdsfa
+    div.search_box
+        input.search_box__input(type="text" name="name1" placeholder="닉네임을 입력해주세요")
+        i.fas.fa-search
+    div.search_box
+        input.search_box__input(type="text" name="name2" placeholder="만났던 유저의 닉네임을 입력해주세요")
+        i.fas.fa-search
 script(src="public/js/search.js") 

@@ -2,6 +2,7 @@
 /* components */
 @import "./components/header.css";
 @import "./components/error.css";
+@import "./components/search_form.css";
 /* screens */
 @import "./screens/login.css";
 @import "./screens/join.css";
